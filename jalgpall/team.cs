@@ -9,6 +9,7 @@ namespace jalgpall
     public class Team
     {
         public List<Player> Players { get; } = new List<Player>();
+
         public string Name { get; private set; }
         public Game Game { get; set; }
 

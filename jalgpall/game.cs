@@ -8,6 +8,7 @@ namespace jalgpall
 {
     public class Game
     {
+
         public Team HomeTeam { get; }
         public Team AwayTeam { get; }
         public Stadium Stadium { get; }

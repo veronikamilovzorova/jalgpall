@@ -64,18 +64,18 @@ namespace jalgpall
 
         public void Move()
         {
-            if (Team.GetClosestPlayerToBall() != this) // Если текущий игрок не ближайший к мячу, остановите его движение.
+            if (this.Team.GetClosestPlayerToBall() != this)
             {
-                _vx = 0; // Установите скорость по оси X в 0.
+                _vx = 0;
                 _vy = 0;
             }
 
-            if (GetDistanceToBall() < BallKickDistance) // Проверьте, находится ли игрок на достаточно близком расстоянии от мяча для удара
-            { 
-                Team.SetBallSpeed(  // Установите скорость мяча в случайное значение в пределах заданных пределов
-                    MaxKickSpeed * _random.NextDouble(),  // Случайная скорость по оси X.
+            if (GetDistanceToBall() < BallKickDistance)
+            {
+                this.Team.SetBallSpeed(
+                    MaxKickSpeed * _random.NextDouble(),
                     MaxKickSpeed * (_random.NextDouble() - 0.5)
-                    );
+                                    );
             }
             // Вычислите новые координаты игрока на основе текущей скорости.
             var newX = X + _vx;  // Новая координата X игрока.

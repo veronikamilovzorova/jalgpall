@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace jalgpall
 {
     public class Ball
+
     {
         public double X { get; private set; }
         public double Y { get; private set; }
