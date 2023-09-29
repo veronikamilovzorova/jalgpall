@@ -62,6 +62,8 @@ namespace jalgpall
             _vy = dy / ratio;
         }
 
+
+
         public void Move()
         {
             if (this.Team.GetClosestPlayerToBall() != this)
@@ -92,6 +94,7 @@ namespace jalgpall
                 // Если новая позиция за пределами поля, остановите его движение.
                 _vx = _vy = 0; // Установите скорости по осям X и Y в 0.
             }
+
         }
     }
 }
